@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание (Ряд 2)</title>
+    <style>
+        :root {
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --accent-color: #2c3e50;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .day-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .day-header {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .lesson-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lesson-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background 0.2s;
+        }
+
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+
+        .lesson-item:hover {
+            background-color: #f9fbfc;
+        }
+
+        .lesson-num {
+            font-weight: bold;
+            color: #95a5a6;
+            width: 30px;
+            font-size: 0.9rem;
+        }
+
+        .lesson-name {
+            flex-grow: 1;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Цветовые маркеры для разных предметов (опционально) */
+        .lesson-name[data-type="math"] { color: #2980b9; }
+        .lesson-name[data-type="rus"] { color: #c0392b; }
+        .lesson-name[data-type="phys"] { color: #27ae60; }
+        .lesson-name[data-type="hist"] { color: #8e44ad; }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Расписание уроков</h1>
+
+    <div class="schedule">
+
+        <!-- Понедельник -->
+        <div class="day-card">
+            <div class="day-header">Понедельник</div>
+            <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-name">Вероятность и статистика</span></li>
+                <li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-name">литература</span></li>
+                <li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-name">Геометрия</span></li>
+                <li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-name">Английский</span></li>
+                <li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-name">Общество</span></li>
+                <li class="lesson-item"><span class="lesson-num">6</span><span class="lesson-name">ОБЖ</span></li>
+                <li class="lesson-item"><span class="lesson-num">7</span><span class="lesson-name">Физкультура</span></li>
+            </ul>
+        </div>
+
+        <!-- Вторник -->
+        <div class="day-card">
+            <div class="day-header">Вторник</div>
+            <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-name">Химия</span></li>
+                <li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-name">Английский</span></li>
+                <li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-name">Алгебра</span></li>
+                <li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-name">История</span></li>
+                <li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-name">География</span></li>
+                <li class="lesson-item"><span class="lesson-num">6</span><span class="lesson-name">Русский</span></li>
+                <li class="lesson-item"><span class="lesson-num">7</span><span class="lesson-name">Проект</span></li>
+            </ul>
+        </div>
+
+        <!-- Среда -->
+        <div class="day-card">
+            <div class="day-header">Среда</div>
+            <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-name">Алгебра</span></li>
+                <li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-name">Литература</span></li>
+                <li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-name">Алгебра</span></li>
+                <li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-name">Биология</span></li>
+                <li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-name">Физкультура</span></li>
+                <li class="lesson-item"><span class="lesson-num">6</span><span class="lesson-name">Физика</span></li>
+                <li class="lesson-item"><span class="lesson-num">7</span><span class="lesson-name">География</span></li>
+            </ul>
+        </div>
+
+        <!-- Четверг -->
+        <div class="day-card">
+            <div class="day-header">Четверг</div>
+            <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">0</span><span class="lesson-name">Россия мои горизонты</span></li>
+                <li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-name">Алгебра</span></li>
+                <li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-name">Физкультура</span></li>
+                <li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-name">Русский</span></li>
+                <li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-name">История</span></li>
+                <li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-name">Английский</span></li>
+                <li class="lesson-item"><span class="lesson-num">6</span><span class="lesson-name">Общество</span></li>
+                <li class="lesson-item"><span class="lesson-num">7</span><span class="lesson-name">География</span></li> 
+                </ul>
+            </div>
+
+        <!-- Пятница -->
+        <div class="day-card">
+            <div class="day-header">Пятница</div>
+            <ul class="lesson-list">
+                <li class="lesson-item"><span class="lesson-num">1</span><span class="lesson-name">География</span></li>
+                <li class="lesson-item"><span class="lesson-num">2</span><span class="lesson-name">Литература</span></li>
+                <li class="lesson-item"><span class="lesson-num">3</span><span class="lesson-name">Геометрия</span></li>
+                <li class="lesson-item"><span class="lesson-num">4</span><span class="lesson-name">Геометрия</span></li>
+                <li class="lesson-item"><span class="lesson-num">5</span><span class="lesson-name">Физика</span></li>
+                <li class="lesson-item"><span class="lesson-num">6</span><span class="lesson-name">Коварные знаки</span></li> 
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
