@@ -1,8 +1,67 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>тест</title>
-  </head>
-  <body>
-    <h1>нет ошибки</h1>
-  </body>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Навигация</title>
+        <style type="text/css" media="all">
+            :root{
+                --bg: #0a192f;
+                --card: #112240;
+                --border: #233554;
+                --text: #ccd6f6;
+                --second-text: #8892b0;
+                --button: #31cc97;
+                --button-border: #19aa75
+            }
+            
+            .card {
+                background-color: var(--card);
+                align-content: center;
+                color: var(--text); 
+            }
+            
+            @media (max-width: 600px) { 
+                .card {
+                    border-radius: 2rem;
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1.5rem;
+                    margin: 1.5rem;
+                    border: var(--border) 3px solid;
+                    align-items: center;
+                    font-size: 2rem;
+                } 
+                
+                .desc {
+                    padding: 1rem;
+                    font-size: 1rem;
+                    color: var(--second-text);
+                    text-align: center;
+                    margin: 0.5rem;
+                }
+                
+                .btn {
+                    border-radius: 1rem;
+                    display: flex;
+                    flex-direction: column;
+                    padding:0.5rem;
+                    margin: 0.5rem;
+                    border: var(--button-border) 3px solid;
+                    background-color: var(--button);
+                    color: var(--card);
+                    align-items: center;
+                    font-size: 2rem;
+                }
+            }
+        </style> 
+    </head>
+    <body style="background-color: var(--bg)"> 
+        <span class="card">
+            Расписание
+            <div class="desc">
+                сайт с рассписанием, который я создал для своего удобств
+            </div>
+            <a href="school" class="btn">перейти</a>
+        </span>
+    </body>
 </html>
